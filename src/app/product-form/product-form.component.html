@@ -1,0 +1,25 @@
+<h3>please fill out the form:</h3>
+
+<form (ngSubmit)="addThisProduct()" >
+  <label for="product-name-input">Name</label><br>
+  <input type="text" name="name" id="product-name-input" placeholder=""
+          [(ngModel)]="theNewProduct.name" >
+          <p class="error" *ngIf='productError.name'>{{productError.name}}</p>
+          <br>
+
+  <label for="product-price-input">Price</label><br>
+  <input type="number" name="price" id="product-price-input" step="0.10"
+          [(ngModel)]="theNewProduct.price">
+          <p class="error" *ngIf='productError.price'>{{productError.price}}</p>
+          <br>
+
+  <label for="product-description-input">Description</label><br>
+  <textarea name="description" id="product-description-input" rows="8" cols="80"
+            [(ngModel)]="theNewProduct.description"></textarea>
+            <p class="error" *ngIf="productError.description">{{productError.description}}</p>
+    <br>
+
+    <button>Submit</button>
+
+
+</form>

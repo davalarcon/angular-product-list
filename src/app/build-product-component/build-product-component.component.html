@@ -1,0 +1,5 @@
+<h2>Build your own product</h2>
+
+<app-product-form (onProductAdd)="addProductToArray($event)"></app-product-form>
+
+<app-product-list [productArray]="allTheProducts"></app-product-list>
